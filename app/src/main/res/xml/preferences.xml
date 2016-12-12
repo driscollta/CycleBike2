@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<ListPreference android:enabled="true" android:key="@string/pref_unit_key"
+		android:dialogTitle="@string/pref_unit_dialog_title"
+		android:title="@string/pref_unit_title" android:entries="@array/pref_unit_entries"
+		android:entryValues="@array/pref_unit_values" android:defaultValue="@string/pref_unit_default" />
+	<ListPreference android:enabled="true"
+		android:key="@string/pref_distance_key" android:dialogTitle="@string/pref_distance_dialog_title"
+		android:title="@string/pref_distance_title"
+		android:entries="@array/pref_distance_entries" android:entryValues="@array/pref_distance_values"
+		android:defaultValue="@string/pref_distance_default" />
+    <ListPreference
+        android:defaultValue="@string/pref_tcx_idle_time_default"
+        android:dialogTitle="@string/pref_tcx_idle_time_dialog_title"
+        android:enabled="true"
+        android:entries="@array/pref_tcx_file_idle_entries"
+        android:entryValues="@array/pref_tcx_file_idle_values"
+        android:key="@string/pref_tcx_idle_time_key"
+        android:title="@string/pref_tcx_idle_time_title" />
+	<ListPreference android:enabled="true"
+		android:key="@string/pref_activity_file_key" android:dialogTitle="@string/pref_activity_file_dialog_title"
+		android:title="@string/pref_activity_file_title"
+		android:entries="@array/pref_activity_file_entries" android:entryValues="@array/pref_activity_file_values"
+		android:defaultValue="@string/pref_activity_file_default" />
+    <ListPreference
+        android:defaultValue="@string/pref_trackpoint_density_default"
+        android:dialogTitle="@string/pref_trackpoint_density_dialog_title"
+        android:enabled="true"
+        android:entries="@array/pref_trackpoint_density_entries"
+        android:entryValues="@array/pref_trackpoint_density_values"
+        android:key="@string/pref_trackpoint_density_key"
+        android:title="@string/pref_trackpoint_density_title" />
+    <CheckBoxPreference android:title="@string/hivizdisplay"
+		android:key="hi_viz" android:enabled="true" />	
+</PreferenceScreen>

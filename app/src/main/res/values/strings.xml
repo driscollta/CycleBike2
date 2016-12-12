@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="open_location_settings" translatable="false">Location settings disabled</string>
+    <string name="allow">Allow</string>
+    <string name="link1_link" translatable="false">http://www.bikemap.net/</string>
+    <string name="link1_header" translatable="false">bikemap.net</string>
+    <string name="link2_link" translatable="false">https://ridewithgps.com/</string>
+    <string name="link2_header" translatable="false">Ride with GPS</string>
+    <string name="link3_link" translatable="false">http://www.mapmyride.com/routes/create/</string>
+    <string name="link3_header" translatable="false">Map my ride</string>
+    <string name="link4_link" translatable="false">http://www.cyclebikeapp.com/cyclebike-faqs/</string>
+    <string name="link4_header" translatable="false">Route file tips and tricks</string>
+    <string name="pref_unit_key">unit_default</string>
+	<string name="pref_unit_dialog_title">Units </string>
+	<string name="pref_unit_title">Units</string>
+	<string name="pref_unit_default">0</string>
+	<string name="pref_distance_key">distance_default</string>
+	<string name="pref_distance_dialog_title">Distance type </string>
+	<string name="pref_distance_title">Distance Display</string>
+	<string name="pref_distance_default">0</string>
+	<string name="pref_activity_file_key" translatable="false">activity_file_default</string>
+	<string name="pref_activity_file_dialog_title" translatable="false">Activity File Format </string>
+	<string name="pref_activity_file_title" translatable="false">Activity format</string>
+	<string name="pref_activity_file_default" translatable="false">0</string>
+	<string name="pref_tcx_idle_time_key">tcx_idle_default</string>
+	<string name="pref_tcx_idle_time_dialog_title">Select idle-time (hrs) </string>
+	<string name="pref_tcx_idle_time_title">tcx file auto-reset</string>
+	<string name="pref_tcx_idle_time_default">0</string>
+	<string name="pref_trackpoint_density_key">trackpoint_density_default</string>
+	<string name="pref_trackpoint_density_dialog_title">Select TrackPoint Density </string>
+	<string name="pref_trackpoint_density_title">Track point Density</string>
+	<string name="pref_trackpoint_density_default">1</string>
+    <string name="upgrade_button_text">upgrade</string>
+    <string name="activity_name">SettingsActivity</string>
+	<string name="menu_load">Load route</string>
+	<string name="menu_about">About</string>
+	<string name="app_name">CycleBike</string>
+	<string name="menu_settings">Settings</string>
+    <string name="menu_share" translatable="false">Upload activity</string>
+    <string name="no_browser" translatable="false">No browser installed</string>
+	<string name="sharing_alert" translatable="false">New Activity will start</string>
+	<string name="sharing_text" translatable="false">Sharing this activity resets trip data</string>
+		<string name="title_activity_display">CycleBike</string>
+	<string name="about_section1">What\'s this app all about?</string>
+	<string name="body_section1">\tThrow away that paper route sheet.\n\n\tStop following people you don\'t know.
+        \n\nCycleBike helps you navigate with GPS and a track file. It records your path to upload to Strava or other fitness sites.
+	</string>
+	<string name="about_section2">Display</string>
+	<string name="body_section2"> Line-by-line instructions have
+        \n\t\ta turn arrow
+        \n\t\tturn description
+        \n\t\tdistance to the next intersection
+        \n\t\tangular direction to the intersection
+        \n\nThe display scrolls automatically when you reach an intersection.
+        \nScroll manually to preview the route.
+        \nLong-click an instruction in the list to navigate from this point.
+    </string>
+	<string name="about_section2a">Tips</string>
+	<string name="body_section2a">Battery management is critical in this app.
+        \n\t\tTurn-off WiFi, Bluetooth.
+        \n\t\tSet screen brightness to minimum.
+	</string>
+	<string name="about_section3">Route Files</string>
+	<string name="body_section3">Create navigation files at these web sites.
+    </string>
+        <string name="body_section3a">Install route files on the phone\'s memory card.
+	</string>
+
+    <string name="about_section4">Menus</string>
+	<string name="body_section4">Settings: customize the display
+        \nLoad route: choose a route stored on the phone
+        \nStrava Login: authorize Strava uploads
+	</string>
+    <string name="about_section4a">Share Activity</string>
+	<string name="body_section4a">Upload tcx or fit files to Dropbox, Strava, MayMyRide, etc.
+	</string>
+    <string name="about_section4b">Save Activity</string>
+	<string name="body_section4b">Save activity file and erase all current data
+	</string>
+    <string name="about_section5">Danger!!!</string>
+	<string name="body_section5">Don\'t be foolish: use this app responsibly and
+		don\'t play with your phone while riding. Stop in a safe place if you
+		need to use the Options Menu, scroll the route display, or turn-on the
+		GPS. You have been warned! Don\'t blindly follow the turn arrow: make
+		sure a road is there before you turn. Don\'t ride straight into a
+		brick wall, a barricade, or a blocked-off bridge. Keep your head up.
+	</string>
+	<string name="copy_right">
+		\nCopyright © 2013, 2014 cyclebikeapp. All Rights
+		Reserved.\n
+	</string>
+	<!-- message that a way point change in direction is close-by -->
+    <!-- title -->
+	<string name="reset_data">Reset Data</string>
+	<!-- message for the dialog to zero-out data -->
+	<string name="okay_to_reset_trip_data_">Okay to reset trip data?</string>
+	<!-- message that navigation from this point is not possible because we 
+		are not near enough -->
+	<string name="_is_not_close_enough">" is not close enough"</string>
+	<!-- message that we are now navigating from this new location -->
+	<string name="now_navigating_from_">"Now navigating from "</string>
+	<string name="zero">00.0</string>
+	<string name="zero_time">00:00:00</string>
+    <string name="reset_title">Save trip data and reset</string>
+    <string name="menu_reset">Save/Reset</string>
+    <string name="reset_message">Save activity data, then zero trip-distance, ride-time?</string>
+    <string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="no">No</string>
+    <string name="reqGPSOn_message">Turn-on GPS receiver</string>
+	<string name="trip_zeros">000.0</string>
+	<string name="trip_dist_mi">Trip Dist-mi</string>
+	<string name="trip_dist_km">Trip Dist-km</string>
+	<string name="trip_time">Ride Time</string>
+	<string name="avg_speed_mph">Avg-mph</string>
+	<string name="max_speed_mph">Max-mph</string>
+	<string name="curr_gps_speed_mph">Speed-mph</string>
+	<string name="avg_speed_kph">Avg-kph</string>
+	<string name="max_speed_kph">Max-kph</string>
+	<string name="curr_gps_speed_kph">Speed-kph</string>
+    <string name="acq_satellites1">-+ Acquiring satellites +-</string>
+	<string name="acq_satellites2">+- Acquiring satellites -+</string>
+	<string name="_saxexception">" SAXException"</string>
+	<string name="cyclebike_load_route_file">Load Route File</string>
+	<string name="cyclebike_choose_track_file">Choose Track File</string>
+	<string name="about_cyclebike_">About CycleBike</string>
+	<string name="upload_file">Upload File</string>
+    <string name="invalid_file_">Invalid File:</string>
+	<string name="can_t_write_to_external_storage">Can\'t write to external storage</string>
+	<string name="error_writing_data_to_log_file">Error writing data to log file</string>
+	<string name="error_opening_log_file">Error opening log file</string>
+	<string name="error_re_opening_log_file">Error re-opening log file</string>
+	<string name="error_reopening_raf">Error reopening RAF</string>
+	<string name="sd_card_not_mounted_remove_usb_cable_">SD card not mounted, remove USB cable?</string>
+	<string name="file_not_found">File not found</string>
+	<string name="error_opening_raf">Error opening RAF</string>
+	<string name="error_closing_log_file">Error closing log file</string>
+	<string name="_this_file_has_lat_long_errors">" This file has lat/long errors"</string>
+	<!-- keywords found in a route file that indicate deviation in direction 
+		at a waypoint; all capital letters -->
+	<!-- direction deviation to the right -->
+	<string name="right">RIGHT</string>
+	<!-- direction deviation to the left -->
+	<string name="left">LEFT</string>
+	<!-- keep right should be the same as slight right -->
+	<string name="keep_right">KEEP RIGHT</string>
+	<!-- direction deviation to the right by less than 90 degrees -->
+	<string name="slight_right">SLIGHT RIGHT</string>
+    <!-- another possible spelling for course deviation to the right -->
+	<string name="right_slight">RIGHT SLIGHT</string>
+    <!-- direction unchanged -->
+	<string name="straight">STRAIGHT</string>
+	<!-- direction deviation to the left, but not 90 degrees -->
+	<string name="slight_left">SLIGHT LEFT</string>
+    <!-- keep left should be the same as slight left -->
+	<string name="keep_left">KEEP LEFT</string>
+	<!-- another possible spelling for course deviation to the left -->
+	<string name="left_slight">LEFT SLIGHT</string>
+    <!-- direction unchanged -->
+	<string name="continue_">CONTINUE</string>
+	<!-- reverse course deviation -->
+	<string name="uturn">UTURN</string>
+	<!-- another possible spelling for course deviation by 180 degrees -->
+	<string name="u_turn">U TURN</string>
+	<!-- direction deviation by 180 degrees -->
+	<string name="u_turn_">U-TURN</string>
+	<!-- a keyword in the file indicating summit of a climb -->
+	<string name="summit" translatable="false">SUMMIT</string>
+	<!-- a keyword in the file indicating food is available -->
+	<string name="food">FOOD</string>
+	<!-- a keyword in the file indicating drinking water is available -->
+	<string name="water">WATER</string>
+																
+	<!-- a keyword indicating the direction leads toward a feature -->
+    <!-- a keyword indicating the travel direction leads in this way -->
+	<string name="_toward_">" TOWARD "</string>
+	<!-- a keyword indicating the travel path goes onto a structure or a road name -->
+	<string name="_onto_">" ONTO "</string>
+
+	<string name="right_de">RECHT</string>
+	<string name="left_de">LINK</string>
+	<string name="slight_right_de">LEICHT RECHTS</string>
+	<string name="right_slight_de">RECHTS LEICHT</string>
+	<string name="straight_de">GERADE</string>
+	<string name="slight_left_de">LEICHT LINK</string>
+	<string name="left_slight_de">LINK LEICHT</string>
+	<string name="continue_de">FORTSETZEN</string>
+	<string name="uturn_de">UDREHUNG</string>
+	<string name="u_turn_de">U DREHUNG</string>
+	<string name="u_turn_de_">U-DREHUNG</string>
+	<string name="food_de">NAHRUNG</string>
+	<string name="water_de">WASSER</string>
+
+    <string name="right_es">DERECH</string>
+	<string name="left_es">IZQUIERD</string>
+	<string name="slight_right_es">LEVE DERECHA</string>
+	<string name="right_slight_es">DERECHA LEVE</string>
+	<string name="straight_es">RECTO</string>
+	<string name="slight_left_es">LEVE IZQUIERD</string>
+	<string name="left_slight_es">IZQUIERDA LEVE</string>
+	<string name="continue_es">CONTINUAR</string>
+	<string name="uturn_es">GIRO EN U</string>
+	<string name="u_turn_es">GIRO-EN-U</string>
+	<string name="u_turn_es_">GIRO EN-U</string>
+	<string name="food_es">ALIMENTOS</string>
+	<string name="water_es">AGUA</string>
+
+    <string name="right_it">DESTRA</string>
+	<string name="left_it">SINISTRA</string>
+	<string name="slight_right_it">LIEVE DESTRA</string>
+	<string name="right_slight_it">DESTRA LIEVE</string>
+	<string name="straight_it">RECTO</string>
+	<string name="slight_left_it">LIEVE SINISTRA</string>
+	<string name="left_slight_it">SINISTRA LIEVE</string>
+	<string name="continue_it">CONTINUA</string>
+	<string name="uturn_it">UTURNO</string>
+	<string name="u_turn_it">U-TURNO</string>
+	<string name="u_turn_it_">U TURNO</string>
+	<string name="food_it">CIBO</string>
+	<string name="water_it">ACQUA</string>
+
+    <string name="right_fr">DROITE</string>
+	<string name="left_fr">GAUCHE</string>
+	<string name="slight_right_fr">LÉGÈREMENT À DROITE</string>
+	<string name="right_slight_fr">DROITE LÉGÈRE</string>
+	<string name="straight_fr">RECTO</string>
+	<string name="slight_left_fr">LÉGÈREMENT À GAUCHE</string>
+	<string name="left_slight_fr">GAUCHE LÉGÈRE</string>
+	<string name="continue_fr">CONTINUER</string>
+	<string name="uturn_fr">DEMI-TOUR</string>
+	<string name="u_turn_fr">DEMI TOUR</string>
+	<string name="u_turn_fr_">DEMITOUR</string>
+	<string name="food_fr">ALIMENT</string>
+	<string name="water_fr">EAU</string>
+    <string name="hivizdisplay">High-visibility Display</string>
+	
+	<!-- these keywords with a space at the end are used to parse with 'contains' -->
+	<string name="right_c" translatable="false">RIGHT </string>
+	<!-- direction deviation to the left -->
+	<string name="left_c" translatable="false">LEFT </string>
+	<string name="straight_c" translatable="false">STRAIGHT </string>
+	<string name="continue_c" translatable="false">CONTINUE </string>
+	<string name="uturn__c" translatable="false">UTURN </string>
+	<string name="u_turn__c" translatable="false">U TURN </string>
+	<!-- direction deviation by 180 degrees -->
+	<string name="u_turn_c" translatable="false">U-TURN </string>
+	<!-- a keyword in the file indicating summit of a climb -->
+    <!-- a keyword in the file indicating food is available -->
+	<string name="food_c" translatable="false">FOOD </string>
+	<!-- a keyword in the file indicating drinking water is available -->
+	<string name="water_c" translatable="false">WATER </string>
+	<string name="right_de_c" translatable="false">RECHT </string>
+	<string name="left_de_c" translatable="false">LINK </string>
+	<string name="straight_de_c" translatable="false">GERADE </string>
+	<string name="continue_de_c" translatable="false">FORTSETZEN </string>
+	<string name="uturn_de_c" translatable="false">UDREHUNG </string>
+	<string name="u_turn_de_c" translatable="false">U DREHUNG </string>
+	<string name="u_turn_de__c" translatable="false">U-DREHUNG </string>
+	<string name="food_de_c" translatable="false">NAHRUNG </string>
+	<string name="water_de_c" translatable="false">WASSER </string>
+	<string name="right_es_c" translatable="false">DERECH </string>
+	<string name="left_es_c" translatable="false">IZQUIERD </string>
+	<string name="straight_es_c" translatable="false">RECTO </string>
+	<string name="continue_es_c" translatable="false">CONTINUAR </string>
+	<string name="uturn_es_c" translatable="false">GIRO EN U </string>
+	<string name="u_turn_es_c" translatable="false">GIRO-EN-U </string>
+	<string name="u_turn_es__c" translatable="false">GIRO EN-U </string>
+	<string name="food_es_c" translatable="false">ALIMENTOS </string>
+	<string name="water_es_c" translatable="false">AGUA </string>
+	<string name="right_it_c" translatable="false">DESTRA </string>
+	<string name="left_it_c" translatable="false">SINISTRA </string>
+	<string name="straight_it_c" translatable="false">RECTO </string>
+	<string name="continue_it_c" translatable="false">CONTINUA </string>
+	<string name="uturn_it_c" translatable="false">UTURNO </string>
+	<string name="u_turn_it_c" translatable="false">U-TURNO </string>
+	<string name="u_turn_it__c" translatable="false">U TURNO </string>
+	<string name="food_it_c" translatable="false">CIBO </string>
+	<string name="water_it_c" translatable="false">ACQUA </string>
+	<string name="right_fr_c" translatable="false">DROITE </string>
+	<string name="left_fr_c" translatable="false">GAUCHE </string>
+	<string name="straight_fr_c" translatable="false">RECTO </string>
+	<string name="continue_fr_c" translatable="false">CONTINUER </string>
+	<string name="uturn_fr_c" translatable="false">DEMI-TOUR </string>
+	<string name="u_turn_fr_c" translatable="false">DEMI TOUR </string>
+	<string name="u_turn_fr__c" translatable="false">DEMITOUR </string>
+	<string name="food_fr_c" translatable="false">ALIMENT </string>
+	<string name="water_fr_c" translatable="false">EAU </string>
+	<string name="permlab_location" translatable="false">Get GPS locations</string>
+	<string name="permdesc_location" translatable="false">GPS locations required to navigate. Location history stored in activity file on the device</string>
+	<string name="permlab_storage" translatable="false">Writing activity data to storage</string>
+	<string name="permdesc_storage" translatable="false">Writing to storage required to save activity file. Location history stored in activity file on the device</string>
+	<string name="authorize" translatable="false">Authorize</string>
+	<string name="login" translatable="false">Login</string>
+	<string name="loading_page" translatable="false">Loading Page…</string>
+	<string name="upload_failed" translatable="false">"Upload failed "</string>
+    <string name="processing" translatable="false">Processing…</string>
+	<string name="auth_cancelled" translatable="false">Authorization cancelled</string>
+	<string name="file_to_strava" translatable="false">File uploading to Strava</string>
+	<string name="dont_remind" translatable="false">Don\'t remind me again</string>
+	<string name="menu_reset_strava" translatable="false">Strava Login</string>
+    <string name="waiting_to_upload" translatable="false">Waiting to upload…</string>
+	<string name="upload_complete" translatable="false">Upload complete</string>
+	<string name="activity_added" translatable="false">1 Activity added</string>
+	<string name="write_permission_denied" translatable="false">Not recording track: permission denied</string>
+	<string name="loc_permission_denied" translatable="false">GPS location permission denied</string>
+	<string name="client_shhhhhhhhh" translatable="false">8dddc2d7285992dfd435d7f19ec03b7bbb11ae72</string>
+    <string name="tripTimeStr" translatable="false">"%1$s:%2$s:%3$s"</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="remind_later" translatable="false">remind later</string>
+    <string name="not_now" translatable="false">not now</string>
+    <string name="nag_title" translatable="false">Upgrade to ANT+ version</string>
+    <string name="nag_message">This phone can use ANT+ to record Heart Rate, Cadence and Power from sensors.\nUpgrade to CycleBike+ at the Play Store</string>
+
+</resources>

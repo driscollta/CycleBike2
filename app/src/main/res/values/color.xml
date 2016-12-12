@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name = "gpsgreen">#15ff00</color>
+    <color name = "gpsred">#ee0000</color>
+    <color name = "textdim">#7b7b7b</color>
+    <color name = "texthiviz">#fbfd00</color>
+	<color name="aboutscroller_background">#d6ffff</color>
+	<color name="actionbar_title_color">#eeeeee</color>
+    <color name="bkgnd_gray">#151515</color>
+    <color name="bkgnd_black">#000000</color>
+    <color name="divider_gray">#b5b5b5</color>
+</resources>

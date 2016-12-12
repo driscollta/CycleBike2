@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout101"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/listBottomDividerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:longClickable="true"
+        tools:ignore="RtlHardcoded"/>
+
+    <View
+        android:id="@+id/listBottomDividerView"
+        style="@style/hDivider"
+        android:layout_above="@+id/include2"/>
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/bikestat_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dividerView"
+        android:layout_alignParentLeft="true"
+        tools:ignore="RtlHardcoded"/>
+
+    <View
+        android:id="@+id/dividerView"
+        style="@style/hDivider"
+        android:layout_above="@+id/textView40"/>
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dividerViewBottom"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/reqGPSOn_message"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+    <View
+        android:id="@+id/dividerViewBottom"
+        style="@style/hDivider"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

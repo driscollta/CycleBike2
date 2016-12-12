@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@drawable/food" android:maxLevel="0" />
+	<item android:drawable="@drawable/water1" android:maxLevel="1" />
+    <item android:drawable="@drawable/lt_turn" android:maxLevel="2" />
+	<item android:drawable="@drawable/sl_turn" android:maxLevel="3" />
+	<item android:drawable="@drawable/s_turn" android:maxLevel="4" />
+	<item android:drawable="@drawable/sr_turn" android:maxLevel="5" />
+	<item android:drawable="@drawable/rt_turn" android:maxLevel="6" />
+	<item android:drawable="@drawable/u_turn" android:maxLevel="7" />
+	<item android:drawable="@drawable/turn_question" android:maxLevel="8" />
+	<item android:drawable="@drawable/food" android:maxLevel="9" />
+	<item android:drawable="@drawable/water1" android:maxLevel="10" />
+	<item android:drawable="@drawable/lt_turn_dim" android:maxLevel="11" />
+	<item android:drawable="@drawable/sl_turn_dim" android:maxLevel="12" />
+	<item android:drawable="@drawable/s_turn_dim" android:maxLevel="13" />
+	<item android:drawable="@drawable/sr_turn_dim" android:maxLevel="14" />
+	<item android:drawable="@drawable/rt_turn_dim" android:maxLevel="15" />
+	<item android:drawable="@drawable/u_turn_dim" android:maxLevel="16" />
+	<item android:drawable="@drawable/turn_question_dim" android:maxLevel="17" />
+	<item android:drawable="@drawable/food" android:maxLevel="18" />
+	<item android:drawable="@drawable/water1" android:maxLevel="19" />
+	<item android:drawable="@drawable/hv_lt_turn" android:maxLevel="20" />
+	<item android:drawable="@drawable/hv_sl_turn" android:maxLevel="21" />
+	<item android:drawable="@drawable/hv_s_turn" android:maxLevel="22" />
+	<item android:drawable="@drawable/hv_sr_turn" android:maxLevel="23" />
+	<item android:drawable="@drawable/hv_rt_turn" android:maxLevel="24" />
+	<item android:drawable="@drawable/u_turn" android:maxLevel="25" />
+	<item android:drawable="@drawable/turn_question" android:maxLevel="26" />
+	<item android:drawable="@drawable/food" android:maxLevel="27" />
+	<item android:drawable="@drawable/water1" android:maxLevel="28" />
+	<item android:drawable="@drawable/summit" android:maxLevel="29" />
+	<item android:drawable="@drawable/summit" android:maxLevel="38" />
+	<item android:drawable="@drawable/summit" android:maxLevel="47" />
+	<item android:drawable="@drawable/x_turn" android:maxLevel="99" />
+	<item android:drawable="@drawable/x_turn_dim" android:maxLevel="108" />		
+</level-list>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="pref_unit_entries">
+		<item>Miglia</item>
+		<item>Chilometri</item>
+	</string-array>
+	<string-array name="pref_unit_values">
+		<item>0</item>
+		<item>1</item>
+	</string-array>
+	<string-array name="pref_tcx_file_idle_entries">
+		<item>2 hours</item>
+		<item>4 hours</item>
+		<item>6 hours</item>
+		<item>8 hours</item>
+	</string-array>
+	<string-array name="pref_tcx_file_idle_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="pref_trackpoint_density_entries">
+		<item>none</item>
+		<item>low density</item>
+		<item>moderate density</item>
+		<item>high density</item>
+	</string-array>
+	<string-array name="pref_trackpoint_density_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="pref_distance_entries">
+		<item>Itinerario Distanza</item>
+		<item>Diretto Distanza</item>
+	</string-array>
+	<string-array name="pref_distance_values">
+		<item>0</item>
+		<item>1</item>
+	</string-array>
+	<string-array name="pref_activity_file_entries">
+		<item>.tcx format</item>
+		<item>.fit format</item>
+	</string-array>
+	<string-array name="pref_activity_file_values">
+		<item>0</item>
+		<item>1</item>
+	</string-array>
+</resources>

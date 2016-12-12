@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+	android:orientation="horizontal" android:padding="1dip">
+
+	<!-- ListRow Left sied Thumbnail image -->
+
+	<LinearLayout android:id="@+id/thumbnail"
+                  android:layout_width="wrap_content" android:layout_height="48dip"
+                  android:layout_alignParentLeft="true" android:layout_marginRight="2dip"
+                  tools:ignore="RtlHardcoded">
+		<ImageView android:id="@+id/turn_icon" android:layout_width="32dip"
+                   android:layout_height="32dip" android:layout_gravity="center_vertical"
+                   android:src="@drawable/turn_levels"
+                   tools:ignore="ContentDescription"/>
+	</LinearLayout>
+
+	<TextView android:id="@+id/street_name" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_centerVertical="true"
+              android:layout_marginRight="2dp" android:layout_toLeftOf="@+id/distance"
+              android:layout_toRightOf="@+id/thumbnail" android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textSize="22sp"
+              tools:ignore="RtlHardcoded"/>
+
+	<TextView android:id="@+id/distance" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_centerVertical="true"
+              android:layout_marginLeft="2dp" android:layout_toLeftOf="@+id/distance_unit"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textSize="20sp"
+              tools:ignore="RtlHardcoded"/>
+
+	<TextView android:id="@+id/distance_unit"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_centerVertical="true" android:layout_marginLeft="2dp"
+              android:layout_marginRight="2dp" android:layout_toLeftOf="@+id/bearing_icon"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              tools:ignore="RtlHardcoded"/>
+
+	<LinearLayout android:id="@+id/bearing_icon"
+                  android:layout_width="wrap_content" android:layout_height="48dip"
+                  android:layout_alignParentRight="true" android:layout_marginRight="2dip"
+                  tools:ignore="RtlHardcoded">
+
+		<ImageView android:id="@+id/arrow_icon"
+                   android:layout_width="32dip" android:layout_height="32dip"
+                   android:layout_gravity="center_vertical" android:src="@drawable/arrow_levels_extended"
+                   tools:ignore="ContentDescription"/>
+	</LinearLayout>
+
+</RelativeLayout>

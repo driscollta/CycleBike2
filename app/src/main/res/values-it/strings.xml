@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- These should not be translated -->
+	<string name="pref_tcx_idle_time_key">tcx_idle_default</string>
+	<string name="pref_distance_key">distance_default</string>
+    <string name="pref_unit_key">unit_default</string>
+	<string name="pref_distance_default">0</string>
+	<string name="pref_tcx_idle_time_default">0</string>
+	<string name="pref_unit_default">0</string>
+	<string name="app_name">CycleBike+</string>
+	<string name="title_activity_display">CycleBike+</string>
+    <string name="zero">00.0</string>
+	<string name="zero_time">00:00:00</string>
+	<string name="trip_zeros">000.0</string>
+	<string name="activity_name">SettingsActivity</string>
+
+	<!-- translate words between ">" symbol and "</string>" label; for example 
+		"Use ANT+" -->
+	<!-- In options menu: user to choose distance units -->
+	<!-- In options menu: user to choose distance units 
+	<string name="pref_unit_dialog_title">Units </string> -->
+	<string name="pref_unit_dialog_title">Unità </string>
+<!-- <string name="pref_unit_title">Units</string> -->
+	<string name="pref_unit_title">Unità</string>
+	<!-- In preferences menu: dialog for user to select type of distance display 
+	<string name="pref_distance_dialog_title">Distance type </string> -->
+	<string name="pref_distance_dialog_title">Tipo di distanza  </string>
+	<!--<string name="pref_distance_title">Distance Display</string> -->
+	<string name="pref_distance_title">Distanza Display </string>
+	<!-- In preferences menu: dialog for user to select idle-time 
+	<string name="pref_tcx_idle_time_dialog_title">Select idle-time (hrs) </string> -->
+	<string name="pref_tcx_idle_time_dialog_title">Selezionare periodi di inattività</string>
+	<!-- <string name="pref_tcx_idle_time_title">tcx file auto-reset</string> -->
+	<string name="pref_tcx_idle_time_title">reset automatico di file TCX</string>
+	<string name="pref_trackpoint_density_key">trackpoint_density_default</string>
+	<string name="pref_trackpoint_density_dialog_title">Select TrackPoint Density </string>
+	<string name="pref_trackpoint_density_title">Track point Density</string>
+	<string name="pref_trackpoint_density_default">1</string>
+		<!-- In options menu: user to choose gps file containing route to navigate 
+		<string name="menu_load">Load route</string> -->
+	<string name="menu_load">Scaricare file rotta</string>
+	<!-- In options menu: display information about the app 
+	<string name="menu_about">About</string> -->
+	<string name="menu_about">Informazioni</string>
+	<!-- In options menu: user to configure app 
+	<string name="menu_settings">Settings</string> -->
+	<string name="menu_settings">Impostazioni</string>
+	<!-- On Action Bar: user to share location track file 
+	<string name="share">Upload tcx</string> -->
+    <!-- the \n is a line-break code; the \' is a code for single quote and \" is a code for double quote
+        <string name="body_section1">There are plenty
+        of navigation applications, but none of them follow a prescribed route, as
+        you would on an organized ride. A paper sheet with routing directions is
+        so 20th century. CycleBike+ uses the GPS receiver in your smart phone to
+        display the navigation directions, and more! There is a cycling computer
+        that displays speed, distance, and other info. The GPS receiver records locations,
+        distance travelled and speed. ANT+ sensors can measure speed, cadence, heart-rate
+        and power. See the Information page in the ANT+ Configuration menu. </string> -->
+	<string name="body_section1">Ci sono un sacco di applicazioni di navigazione, ma
+		nessuno di loro seguono un itinerario prestabilito, come si farebbe su
+		un giro organizzato. Un foglio di carta con le indicazioni di
+		instradamento è così del 20 ° secolo.
+		CycleBike+ utilizza il ricevitore
+		GPS nel tuo smartphone per visualizzare le istruzioni di navigazione,
+		e molto altro ancora! C\'è un cycling computer che visualizza velocità,
+		distanza, e altre informazioni.
+		Il ricevitore GPS registra le posizioni, la distanza percorsa e
+		velocità. ANT+ sensori possono misurare la velocità, cadenza,
+		frequenza cardiaca e la potenza. Vedere la pagina delle informazioni
+		nella ANT+ menu di configurazione.
+	</string>
+<!--	<string name="body_section2">Line-by-line instructions have a directional arrow,
+		description (usually the name of the street), the distance to the next
+		intersection along the route, and angular direction to the
+		intersection. The display scrolls automatically when a intersection is
+		reached; or can be scrolled manually to preview and review the route.
+		If you deviate from the route, or do not start at the beginning of the
+		route, the scrolling feature may not work and the distance to the next
+		intersection will be erroneous. You may resume navigating the route
+		after bicycling for some distance. You can long-click an instruction
+		in the list to continue navigating from this point. It\'s possible to
+		navigate only a section of the route, or deviate from the prescribed
+		route. If an intersection is closer than 0.25 miles, one can
+		long-click the appropriate row in the turn-list to resume navigation.
+	</string>  -->
+	<string name="body_section2">L\'elenco di istruzioni hanno una freccia
+		direzionale, descrizione (solitamente il nome della strada), la
+		distanza all\'incrocio successivo lungo la route e direzione angolare
+		per l\'intersezione.
+		Il display scorre automaticamente quando si raggiunge un incrocio; o è
+		possibile scorrere manualmente per visualizzare in anteprima e
+		rivedere il percorso.
+		Se si devia dal percorso, o non avviare
+		all\'inizio del percorso, la funzione di scorrimento potrebbero non
+		funzionare e la distanza dall\'incrocio successivo saranno errati.
+		È possibile riprendere la navigazione del percorso dopo in bicicletta
+		per una certa distanza. Puoi lungo clic su un\'istruzione nella lista
+		per continuare la navigazione da questo punto.
+		È possibile passare solo una parte del percorso, o deviare dal percorso
+		prescritto. Se un incrocio è più vicino di 0,25 miglia, si può a lungo
+		clic sulla riga corrispondente nella lista per riprendere la
+		navigazione.
+	</string>
+<!--	<string name="body_section2a">Battery management is critical in this app. At
+		least half of battery life is just the display back-light. Turn-off
+		WiFi, Bluetooth, etc to prolong useful battery life. Only the GPS
+		sensor is used. Set screen brightness to minimum.
+	</string>  -->
+	<string name="body_section2a">Gestione delle batterie è fondamentale in questa
+		app. Almeno la metà della durata della batteria è solo il display
+		retro-illuminazione. Bivio WiFi, Bluetooth, ecc per prolungare la vita
+		utile della batteria. Viene utilizzato solo il sensore GPS. Impostare
+		la luminosità dello schermo al minimo.
+	</string>
+<!-- 	<string name="body_section3">You can create navigation files using the
+		RideWithGPS, Bikely, BikeRouteToaster web sites. Install the files on
+		the external memory card of your smart phone. You can also use
+		navigation files created in Garmin MapSource, if instructions such as
+		\'Left\'or \'Right\' are entered into the comment fields for the
+		way-points. These files have a \'.gpx\' extension. Often these files
+		are just track-points, without way-point or turn data. Track-point
+		files are not useful in this app. Other types of files may or may not
+		be readable. In BikeRouteToaster export XML files or TCX files with
+		\"Include Course Points\" box checked. In RideWithGPS export GPX route
+		files, or GPX track files with \"Include cues as waypoints\" box
+		checked.
+	</string> -->
+	<string name="body_section3">È possibile creare file di navigazione utilizzando
+		il RideWithGPS, Bikely, o BikeRouteToaster siti web. Installare i file
+		sulla scheda di memoria esterna del vostro smartphone.
+		È inoltre possibile utilizzare file di navigazione creati in Garmin
+		MapSource, se le istruzioni come \'Sinistra\' o \'giuste\' vengono
+		inseriti nel commento i campi per i punti.
+		Questi file hanno estensione \'GPX\'. Spesso questi file sono solo punti di
+		posizione, senza nome dei dati via o intersezione. I file che hanno
+		solo i punti di posizione non sono utili in questa app. Altri tipi di
+		file possono o possono non essere leggibili.
+		Utilizzando il sito web BikeRouteToaster esportazione XML o file TCX con
+		\'Includi Punto Corso \' casella selezionata.
+		Utilizzando il sito web RideWithGPS esportazione file del percorso GPX o file
+		di traccia GPX con \"Include cues as waypoints\" casella selezionata.
+	</string>
+<!-- 	<string name="body_section4">Load route: allows selection of a route stored in
+		the device file system\nReset: erases all data about the current
+		trip\nRestore Route: restores trip data to the point of
+		interruption\nSettings: customize the information display\nANT+&#8482;
+		: Configure and display ANT+ sensor information
+	</string> -->
+	<string name="body_section4">Scarica percorso: consente la selezione di un
+		percorso memorizzato nel file system dispositivo
+		\nReset: Cancella tutti i dati circa il viaggio corrente
+		\nRipristinare percorso: ripristina i dati di viaggio fino al punto di interruzione
+		\nImpostazioni: personalizzare la visualizzazione delle
+		informazioni\nANT+&#8482;
+		: Configurare e visualizzare ANT+ Sensore
+		informazioni
+	</string>
+<!--	<string name="body_section4a">Trip data is saved as a .tcx file that records
+		location, speed, distance and ANT+ sensor data for uploading to
+		Garmin-Connect, Ride-with-GPS, or Strava, etc. A new trackpoint is
+		saved each time a GPS location is received, about once per second.
+		There are several ways to upload the .tcx files. In Strava, use an
+		Android browser to navigate to the Upload Activity -> From File and
+		press the Browse button. You will need a file manager app like Felix
+		or Astro to select the tcx file. These files are placed in Android /
+		Data / com.cyclebikeapp.plus / files. One can also copy files to
+		Google Drive, Dropbox, or the Desktop and upload them from there.
+		\nClick the share icon to e-mail files to Strava, RWGPS, or elsewhere.
+		Make sure the \"from\" address is your log-in e-mail
+	</string>  -->
+	<string name="body_section4a">Dati di viaggio viene salvati come un file tcx che
+		registra la posizione, velocità, distanza e dati del sensore ANT per
+		il caricamento di Garmin-Connect, RideWithGPS o Strava, ecc.
+		Un nuovo trackpoint viene salvato ogni volta che una posizione GPS viene
+		ricevuta, circa una volta al secondo. Ci sono diversi modi per
+		caricare i file tcx.
+		Utilizzando il sito Strava, utilizzare un browser Android per accedere alla
+		Upload Activity -> Da file e premere il pulsante Sfoglia. Avrete
+		bisogno di un app file manager come Astro o Felix per selezionare il
+		file TCX.
+		Questi file vengono inseriti in Android / dati / com.cyclebikeapp.plus /
+		files. Uno può anche copiare il file su Google Drive, Dropbox, o il
+		Desktop e caricarli da lì.
+		\nFare clic sull\'icona share per inviare i
+		file via e-mail a Strava, RWGPS, o altrove. Assicurarsi che il \'da\'
+		indirizzo è il vostro log-in e-mail
+	</string>
+<!--	<string name="body_section5">Don\'t be foolish: use this app responsibly and
+		don\'t play with your phone while riding. Stop in a safe place if you
+		need to use the Options Menu, scroll the route display, or turn-on the
+		GPS. You have been warned! Don\'t blindly follow the turn arrow: make
+		sure a road is there before you turn. Don\'t ride straight into a
+		brick wall, a barricade, or a blocked-off bridge. Keep your head up.
+	</string>  -->
+	<string name="body_section5">Non essere sciocco: utilizzare questa applicazione
+		in modo responsabile e non usare il telefono mentre il ciclismo.
+		Fermarsi in un posto sicuro se è necessario utilizzare il Menu
+		opzioni, scorrere la visualizzazione del percorso o attivare il
+		ricevitore GPS.
+		Siete stati avvertiti! Siete stati avvertiti! Non ciecamente Non seguite la
+		freccia della svolta; assicurarsi che la strada è lì prima di girare.
+		Non andare direttamente in un muro di mattoni, una barricata, o di un
+		ponte bloccato-off. Tenere la testa alta.
+	</string>
+	<string name="copy_right">
+		\nCopyright © 2014 cyclebikeapp. All Rights
+		Reserved.\n
+	</string>
+<!--	<string name="about_section1">What\'s this app all about?</string>  -->
+	<string name="about_section1">Cos\'è questa applicazione tutto questo?</string>
+<!-- 	<string name="about_section1a">What\'s New</string> -->
+    <!-- user GUI
+<string name="about_section2">Display</string> -->
+	<string name="about_section2">Visualizza</string>
+	<!-- optimization hints
+	<string name="about_section2a">Tips</string> -->
+	<string name="about_section2a">Suggerimenti</string>
+<!--<string name="about_section3">Route Files</string>  -->
+	<string name="about_section3">File Percorso</string>
+<!--<string name="about_section4">Menus</string>  -->
+	<string name="about_section4">Menus</string>
+<!--<string name="about_section4a">tcx Files</string>  -->
+	<string name="about_section4a">Condividi Activity</string>
+<!--<string name="about_section5">Danger!!!</string>  -->
+	<string name="about_section5">Pericolo!!!</string>
+<!--<string name="reset_title">Reset trip data</string>	 -->
+	<string name="reset_title">Reimpostare i dati di viaggio</string>
+<!--<string name="menu_reset">Reset</string>  -->
+	<string name="menu_reset">Reset</string>
+<!--<string name="reset_message">Zero Trip-distance, ride-time, max?</string>  -->
+	<string name="reset_message">Zero la distanza percorsa, tempo giro, max?
+	</string>
+<!-- dialog box title and message asking if user wants to restore previous trip information
+	<string name="restore_title">Restore trip data</string> -->
+    <!--<string name="menu_restore">Restore Route</string>  -->
+    <!--<string name="restore_message">Restart previous route?</string>  -->
+    <!-- button text
+    <string name="ok">OK</string> -->
+	<string name="ok">OK</string>
+<!-- <string name="cancel">Cancel</string> -->
+	<string name="cancel">Annulla</string>
+	<!-- button text
+	<string name="no">No</string> -->
+	<string name="no">No</string>
+	<!-- abbreviation for not available -->
+    <!-- dialog box title and message asking the user to allow GPS location service
+    <string name="reqGPSOn_title">Enable GPS</string>-->
+    <!-- <string name="reqGPSOn_message">Turn-on GPS receiver</string> -->
+	<string name="reqGPSOn_message">Accendere il ricevitore GPS</string>
+	<!-- message prompting user to load route directions from the options menu
+	<string name="load_gpx">Load route file using Options Menu</string> -->
+    <!-- label for distance traveled on this trip; space for only about 12 characters
+    <string name="trip_dist_mi">Trip Dist-mi</string>	 -->
+	<string name="trip_dist_mi">Distanza-mi</string>
+	<string name="trip_dist_km">Distanza-km</string>
+<!-- label for duration of this trip; space for only about 12 characters
+	<string name="trip_time">Ride Time</string> -->
+	<string name="trip_time">Tempo di viaggio</string>
+<!-- label for average speed, use abbreviation; space for only about 12 characters
+	<string name="avg_speed_mph">Avg-mph</string> -->
+	<string name="avg_speed_mph">Media-mph</string>
+	<string name="avg_speed_kph">Media-kph</string>
+<!-- label for maximum speed - use abbreviation; space for only about 12 characters
+	<string name="max_speed_mph">Max-mph</string>		 -->
+	<string name="max_speed_mph">Massima-mph</string>
+	<string name="max_speed_kph">Massima-kph</string>
+<!-- label for current speed; space for only about 12 characters
+	<string name="curr_gps_speed_mph">Speed-mph</string> -->
+	<string name="curr_gps_speed_mph">Velocità-mph</string>
+	<string name="curr_gps_speed_kph">Velocità-kph</string>
+<!-- message informing user that GPS locations are not being received
+	<string name="req_gps_on">GPS receiver is disabled</string> -->
+    <!-- message informing user that signal acquisition from gps satellites is in process
+    <string name="acq_satellites1">-+ Acquiring satellites +-</string> -->
+	<string name="acq_satellites1">-+ Acquisizione di segnali satellitari +-</string>
+	<string name="acq_satellites2">+- Acquisizione di segnali satellitari -+</string>
+<!-- message that a way point change in direction is close-by 
+	<string name="turn_approaching">Turn Approaching</string> -->
+    <!-- title
+    <string name="reset_data">Reset Data</string> -->
+	<string name="reset_data">Reimpostare i dati</string>
+<!-- message for the dialog to zero-out data 
+	<string name="okay_to_reset_trip_data_">Okay to reset trip data?</string> -->
+	<string name="okay_to_reset_trip_data_">OK per reimpostare i dati di viaggio?</string>
+<!-- message that navigation from this point is not possible because we are not near enough 
+	<string name="_is_not_close_enough">" is not close enough"</string> 		-->
+	<string name="_is_not_close_enough">" non è abbastanza vicino"</string>
+<!-- message that we are now navigating from this new location 
+	<string name="now_navigating_from_">"Now navigating from "</string> -->
+	<string name="now_navigating_from_">"Ora la navigazione da "</string>
+<!-- error message about failure to access the external memory on the phone
+	<string name="can_t_write_to_external_storage">Can\'t write to external storage</string> -->
+	<string name="can_t_write_to_external_storage">Impossibile scrivere storage esterno</string>
+<!-- error message about lack of an external storage card on the phone
+	<string name="sd_card_not_mounted_remove_usb_cable_">SD card not mounted, remove USB cable?</string> -->
+	<string name="sd_card_not_mounted_remove_usb_cable_">Scheda SD non montata, rimuovere il cavo USB?
+	</string>
+<!-- error message about opening the random access file again
+	<string name="error_reopening_raf">Error reopening RAF</string> -->
+	<string name="error_reopening_raf">Errore riapertura RAF</string>
+<!-- error message about opening the file again
+	<string name="error_re_opening_log_file">Error re-opening log file</string> -->
+	<string name="error_re_opening_log_file">Errore riapertura del file di registro</string>
+<!-- error message about opening the file
+	<string name="error_opening_log_file">Error opening log file</string> -->
+	<string name="error_opening_log_file">Errore durante l\'apertura di file di log</string>
+<!-- error message about accessing the randon access file
+	<string name="error_opening_raf">Error opening RAF</string> -->
+	<string name="error_opening_raf">Errore apertura RAF</string>
+<!-- error message about adding data to the file
+	<string name="error_writing_data_to_log_file">Error writing data to log file</string> -->
+	<string name="error_writing_data_to_log_file">Errore durante la scrittura di dati in file di log
+	</string>
+<!-- error message about finishing log file recording
+	<string name="error_closing_log_file">Error closing log file</string> -->
+	<string name="error_closing_log_file">Errore file di registro di chiusura</string>
+<!-- error message about the requested file being unavailable
+	<string name="file_not_found">File not found</string> -->
+	<string name="file_not_found">File non trovato</string>
+<!-- error message about erroneous latitude/longitude coordinates
+	<string name="_this_file_has_lat_long_errors">This file has lat/long errors</string> -->
+	<string name="_this_file_has_lat_long_errors">Questo file ha latitudine o longitudine errori</string>
+<!-- error message about the file format being incompatible
+	<string name="invalid_file_">Invalid File:</string> -->
+	<string name="invalid_file_">File non valido :</string>
+<!-- error message about the SAX parser
+	<string name="_saxexception">" SAXException"</string> -->
+	<string name="_saxexception">" SAXException"</string>
+<!-- title for the display page where user selects a file containing route locations to follow
+	<string name="cyclebike_load_route_file">CycleBike+ Load Route File</string>		 -->
+	<string name="cyclebike_load_route_file">Scaricare File Rotta</string>
+<!-- title for the display page where user selects a recorded track of locations to share
+	<string name="cyclebike_choose_track_file">CycleBike+ Choose Track File</string> -->
+	<string name="cyclebike_choose_track_file">Scegliere File Traccia</string>
+<!-- title for the display page where user shares a file via e-mail
+	<string name="upload_file">Upload File</string> -->
+	<string name="upload_file">Carica File</string>
+<!-- title for the display page showing the Help information
+	<string name="about_cyclebike_">About CycleBike+</string> -->
+	<string name="about_cyclebike_">Aiuto per CycleBike+</string>
+<!-- <string name="send_tcx_file_to">Send .tcx File to</string> -->
+    <!-- direction deviation to the right -->
+	<string name="right">RIGHT</string>
+	<!-- direction deviation to the left -->
+	<string name="left">LEFT</string>
+	<string name="keep_right">KEEP RIGHT</string>
+		<!-- direction deviation to the right by less than 90 degrees -->
+	<string name="slight_right">SLIGHT RIGHT</string>
+	<!-- another possible spelling for course deviation to the right -->
+	<string name="right_slight">RIGHT SLIGHT</string>
+	<string name="keep_left">KEEP LEFT</string>
+		<!-- direction unchanged -->
+	<string name="straight">STRAIGHT</string>
+	<!-- direction deviation to the left, but not 90 degrees -->
+	<string name="slight_left">SLIGHT LEFT</string>
+	<!-- another possible spelling for course deviation to the left -->
+	<string name="left_slight">LEFT SLIGHT</string>
+	<!-- direction unchanged -->
+	<string name="continue_">CONTINUE</string>
+	<!-- reverse course deviation -->
+	<string name="uturn">UTURN</string>
+	<!-- another possible spelling for course deviation by 180 degrees -->
+	<string name="u_turn">U TURN</string>
+	<!-- direction deviation by 180 degrees -->
+	<string name="u_turn_">U-TURN</string>
+	<!-- a keyword in the file indicating food is available -->
+	<string name="food">FOOD</string>
+	<!-- a keyword in the file indicating drinking water is available -->
+	<string name="water">WATER</string>
+	<!-- a keyword indicating the direction leads toward a feature -->
+    <!-- a keyword indicating the travel direction leads in this way -->
+	<string name="_toward_">" TOWARD "</string>
+	<!-- a keyword indicating the travel path goes onto a structure or a road 
+		name -->
+	<string name="_onto_">" ONTO "</string>
+
+	<string name="right_de">RECHT</string>
+	<string name="left_de">LINK</string>
+	<string name="slight_right_de">LEICHT RECHTS</string>
+	<string name="right_slight_de">RECHTS LEICHT</string>
+	<string name="straight_de">GERADE</string>
+	<string name="slight_left_de">LEICHT LINK</string>
+	<string name="left_slight_de">LINK LEICHT</string>
+	<string name="continue_de">FORTSETZEN</string>
+	<string name="uturn_de">UDREHUNG</string>
+	<string name="u_turn_de">U DREHUNG</string>
+	<string name="u_turn_de_">U-DREHUNG</string>
+	<string name="food_de">NAHRUNG</string>
+	<string name="water_de">WASSER</string>
+
+    <string name="right_es">DERECH</string>
+	<string name="left_es">IZQUIERD</string>
+	<string name="slight_right_es">LEVE DERECHA</string>
+	<string name="right_slight_es">DERECHA LEVE</string>
+	<string name="straight_es">RECTO</string>
+	<string name="slight_left_es">LEVE IZQUIERD</string>
+	<string name="left_slight_es">IZQUIERDA LEVE</string>
+	<string name="continue_es">CONTINUAR</string>
+	<string name="uturn_es">GIRO EN U</string>
+	<string name="u_turn_es">GIRO-EN-U</string>
+	<string name="u_turn_es_">GIRO EN-U</string>
+	<string name="food_es">ALIMENTOS</string>
+	<string name="water_es">AGUA</string>
+
+    <string name="right_it">DESTRA</string>
+	<string name="left_it">SINISTRA</string>
+	<string name="slight_right_it">LIEVE DESTRA</string>
+	<string name="right_slight_it">DESTRA LIEVE</string>
+	<string name="straight_it">RECTO</string>
+	<string name="slight_left_it">LIEVE SINISTRA</string>
+	<string name="left_slight_it">SINISTRA LIEVE</string>
+	<string name="continue_it">CONTINUA</string>
+	<string name="uturn_it">UTURNO</string>
+	<string name="u_turn_it">U-TURNO</string>
+	<string name="u_turn_it_">U TURNO</string>
+	<string name="food_it">CIBO</string>
+	<string name="water_it">ACQUA</string>
+
+    <string name="right_fr">DROITE</string>
+	<string name="left_fr">GAUCHE</string>
+	<string name="slight_right_fr">LÉGÈREMENT À DROITE</string>
+	<string name="right_slight_fr">DROITE LÉGÈRE</string>
+	<string name="straight_fr">RECTO</string>
+	<string name="slight_left_fr">LÉGÈREMENT À GAUCHE</string>
+	<string name="left_slight_fr">GAUCHE LÉGÈRE</string>
+	<string name="continue_fr">CONTINUER</string>
+	<string name="uturn_fr">DEMI-TOUR</string>
+	<string name="u_turn_fr">DEMI TOUR</string>
+	<string name="u_turn_fr_">DEMITOUR</string>
+	<string name="food_fr">ALIMENT</string>
+	<string name="water_fr">EAU</string>
+    <string name="hivizdisplay">High-visibility Display</string>
+    <string name="about_section4b">File TCX</string>
+    <string name="allow">Consentire</string>
+    <string name="body_section3a">Installare file di percorso sulla memory card del telefono.</string>
+    <string name="body_section4b">Salvare file di attività e cancellare tutti i dati correnti</string>
+    <string name="upgrade_button_text">Aggiornare</string>
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="nag_message">Questo telefono può utilizzare ANT+ per registrare la frequenza cardiaca, cadenza e potenza da sensori. Eseguire l\'aggiornamento a CycleBike+ dal Play Store</string>
+
+</resources>

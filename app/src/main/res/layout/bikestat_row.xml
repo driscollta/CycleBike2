@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+	android:layout_height="match_parent" android:layout_marginLeft="2dp"
+	android:layout_marginRight="2dp" android:gravity="top">
+
+	<LinearLayout android:id="@+id/LinearLayout101"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true" android:orientation="vertical"
+                  tools:ignore="RtlHardcoded">
+
+		<TextView android:id="@+id/textView24" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:text="@string/trip_dist_mi"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="12sp" />
+
+		<TextView android:id="@+id/textView25" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="0dp" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:layout_marginTop="2dp"
+			android:text="@string/trip_zeros" android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="22sp" />
+
+        <View style="@style/hDivider"
+              android:background="@color/divider_gray"/>
+		<TextView android:id="@+id/textView38" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:text="@string/trip_time"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="12sp" />
+
+		<TextView android:id="@+id/textView39" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+			android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+			android:layout_marginTop="2dp" android:text="@string/zero_time"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	</LinearLayout>
+
+
+    <View style="@style/vDivider"
+          android:id="@+id/imageView301"
+          android:layout_alignBottom="@+id/LinearLayout101"
+          android:layout_toRightOf="@+id/LinearLayout101"
+          android:background="@color/divider_gray"/>
+	<LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/imageView301"
+        android:layout_toLeftOf="@+id/imageView101" android:layout_toRightOf="@+id/imageView301"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
+
+		<TextView android:id="@+id/textView32" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                  android:text="@string/curr_gps_speed_mph" android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textSize="12sp"
+                  tools:ignore="RtlHardcoded"/>
+
+		<TextView android:id="@+id/textView33" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+			android:layout_marginTop="10dp" android:text="@string/zero"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textSize="40sp" />
+	</LinearLayout>
+
+
+    <View style="@style/vDivider"
+          android:id="@+id/imageView101"
+          android:layout_alignBottom="@+id/LinearLayout101"
+          android:layout_toLeftOf="@+id/LinearLayout3"
+          android:background="@color/divider_gray"/>
+	<LinearLayout android:id="@+id/LinearLayout3"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_alignBaseline="@+id/LinearLayout101"
+                  android:layout_alignParentRight="true" android:orientation="vertical"
+                  tools:ignore="RtlHardcoded">
+
+		<TextView android:id="@+id/textView26" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:text="@string/avg_speed_mph"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="12sp" />
+
+		<TextView android:id="@+id/textView27" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="0dp" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:layout_marginTop="2dp"
+			android:text="@string/zero" android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="22sp" />
+
+        <View style="@style/hDivider"
+              android:background="@color/divider_gray"/>
+		<TextView android:id="@+id/textView28" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:text="@string/max_speed_mph"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textSize="12sp" />
+
+		<TextView android:id="@+id/textView29" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="0dp" android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp" android:layout_marginTop="2dp"
+			android:text="@string/zero" android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="22sp" />
+
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:cyclebike="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_menu_about"
+        android:orderInCategory="0"
+        android:title="@string/menu_about"
+        cyclebike:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_menu_settings"
+        android:orderInCategory="1"
+        android:title="@string/menu_settings"
+        cyclebike:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_reset"
+        android:icon="@drawable/ic_menu_save"
+        android:orderInCategory="2"
+        android:title="@string/menu_reset"
+        cyclebike:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_reset_strava"
+        android:icon="@drawable/ic_menu_revert"
+        android:orderInCategory="4"
+        android:title="@string/menu_reset_strava"
+        cyclebike:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_load"
+        android:icon="@drawable/ic_menu_load"
+        android:orderInCategory="5"
+        cyclebike:showAsAction="never"
+        android:title="@string/menu_load" />
+
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_menu_share"
+        android:title="@string/menu_share"
+        cyclebike:showAsAction="ifRoom"/>
+</menu>

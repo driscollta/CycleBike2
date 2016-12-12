@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@color/aboutscroller_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section1"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/body_section1"
+            android:textAppearance="@style/body_text"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section2"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/body_section2"
+            android:textAppearance="@style/body_text"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section2a"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/body_section2a"
+            android:textAppearance="@style/body_text"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section3"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/body_section3"
+            android:textAppearance="@style/body_text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/link1_header"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/link1_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:autoLink="web"
+            android:text="@string/link1_link"
+            android:textAppearance="@style/link_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/link2_header"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/link2_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:autoLink="web"
+            android:text="@string/link2_link"
+            android:textAppearance="@style/link_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/link3_header"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/link3_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:autoLink="web"
+            android:text="@string/link3_link"
+            android:textAppearance="@style/link_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/link4_header"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/link4_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:autoLink="web"
+            android:text="@string/link4_link"
+            android:textAppearance="@style/link_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/body_section3a"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section4"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/body_section4"
+            android:textAppearance="@style/body_text"/>
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section4a"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_menu_share"
+            android:drawablePadding="16dp"
+            android:text="@string/body_section4a"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section4b"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_menu_save"
+            android:drawablePadding="16dp"
+            android:text="@string/body_section4b"
+            android:textAppearance="@style/body_text"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/about_section5"
+            android:textAppearance="@style/header_style"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/body_section5"
+            android:textAppearance="@style/body_text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/copy_right"
+            android:textAppearance="@style/copyright_text"
+            tools:ignore="RtlHardcoded"/>
+
+    </LinearLayout>
+
+</ScrollView>
