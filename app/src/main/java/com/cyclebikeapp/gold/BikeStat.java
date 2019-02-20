@@ -3,6 +3,8 @@ package com.cyclebikeapp.gold;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.location.GnssStatus;
+import android.location.GpsSatellite;
 import android.location.Location;
 import android.location.LocationManager;
 
@@ -47,13 +49,34 @@ class BikeStat {
     final FITLogFile fitLog;
     private SharedPreferences.Editor editor;
     private final String logtag = this.getClass().getSimpleName();
-	/**
+    private int satellitesInUse = 0;
+    private float locationAccuracy;
+    private boolean GPSCellNeeded;
+    private boolean GPSWiFiNeeded;
+    Iterable<GpsSatellite> satellites;
+    boolean isNetworkEnabled;
+    boolean isGPSEnabled;
+    private boolean networkCellNeeded;
+    private boolean networkWiFiNeeded;
+    GnssStatus gpsSatelliteStatus;
+    // use System time to indicate loss of GPS after 3 seconds
+    long newFusedLocSysTimeStamp;
+    long newGPSLocSysTimeStamp;
+
+    /**
 	 * BikeStat contains all bike related information: trip distance, time,
 	 * speeds, and control access to the log file
 	 * @param context is the main activity context
 	 */
     @SuppressLint("CommitPrefEdits")
     BikeStat(Context context) {
+        gpsSatelliteStatus = null;
+        GPSCellNeeded = false;
+        GPSWiFiNeeded = false;
+        networkCellNeeded = false;
+        networkWiFiNeeded = false;
+        isGPSEnabled = false;
+        isNetworkEnabled = false;
 		gpsRideTime = 0.4;
 		tcxLog = new TCXLogFile(context);
 		fitLog = new FITLogFile(context);
@@ -80,6 +103,7 @@ class BikeStat {
 		}
 		setGpsSpeed(myPlace.getSpeed());
         gpsSpeedCurrent = true;
+        locationAccuracy = myPlace.getAccuracy();
 
 	}
 	
@@ -193,6 +217,48 @@ private void calcTripDistSpeed() {
 	private void setGpsSpeed(double speed) {
 		this.speed = speed;
 	}
+    void setSatellitesInUse(int satellitesInUse) {
+        this.satellitesInUse = satellitesInUse;
+    }
 
+    float getLocationAccuracy() {
+        return locationAccuracy;
+    }
+
+    int getSatellitesInUse() {
+        return satellitesInUse;
+    }
+
+    boolean getGPSCellNeeded() {
+        return GPSCellNeeded;
+    }
+
+    boolean getGPSWiFiNeeded() {
+        return GPSWiFiNeeded;
+    }
+
+    public void setGPSCellNeeded(boolean GPSCellNeeded) {
+        this.GPSCellNeeded = GPSCellNeeded;
+    }
+
+    public void setGPSWiFiNeeded(boolean GPSWiFiNeeded) {
+        this.GPSWiFiNeeded = GPSWiFiNeeded;
+    }
+
+    public void setNetworkCellNeeded(boolean networkCellNeeded) {
+        this.networkCellNeeded = networkCellNeeded;
+    }
+
+    public void setNetworkWiFiNeeded(boolean networkWiFiNeeded) {
+        this.networkWiFiNeeded = networkWiFiNeeded;
+    }
+
+    public boolean isNetworkCellNeeded() {
+        return networkCellNeeded;
+    }
+
+    public boolean isNetworkWiFiNeeded() {
+        return networkWiFiNeeded;
+    }
 
 }

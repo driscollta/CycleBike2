@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.location.Location;
 import android.location.LocationManager;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -62,7 +63,8 @@ class NavRoute {
 	private static final String SLIGHT_LEFT = "SL";
 	private static final String GENERIC = "GENERIC";
 	private static final String TRACK_POINT = "TrackPoint";
-	private static final int maxTurnNameChars = 48;
+    private static final String SHORT_TRACK_POINT = "TPt ";
+    private static final int maxTurnNameChars = 48;
 	private static final int clusterThreshold = 3;
 	//how close to be from trackpoint to insert a waypoint
 	private static final double wpClose2TP = 15.;
@@ -128,7 +130,9 @@ class NavRoute {
 			XMLReader xr = parser.getXMLReader();
 			xr.setContentHandler(handler);
 			xr.setErrorHandler(handler);
-			r = new BufferedReader(new FileReader(mChosenFile));
+            if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "loadNavRoute() - mChosenFile: " + mChosenFile);
+
+            r = new BufferedReader(new FileReader(mChosenFile));
 			// uses the entire path, not just filename
 			xr.parse(new InputSource(r));
 		} catch (SAXException e) {
@@ -200,6 +204,9 @@ class NavRoute {
 			turnName = "TPC" + i;
 		} else if (mergedRoute.get(i).kind == trkPtKind) {//set "street name" to "TrackPoint"
 			turnName = TRACK_POINT + i;
+            if (Utilities.isScreenWidthSmall(applicationContext)){
+                turnName = SHORT_TRACK_POINT + i;
+            }
 		} else {// RoutePoint should have a street name in one of the fields
 			String commentString = (mergedRoute.get(i).comment.trim());
 			// if comment string blank, look in desc string, then name, then
@@ -1218,7 +1225,8 @@ class NavRoute {
 			 * difference between trip distance and route miles to reset bonus
 			 * miles
 			 */
-			if (isCloseToWP() && farEnough) {
+            if (!farEnough){return;}
+            if (isCloseToWP()) {
 				proximity = true;
 				for (int j = 0; j < i; j++) {
 					GPXRoutePoint tempRtePt;

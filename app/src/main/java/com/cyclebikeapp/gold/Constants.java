@@ -1,18 +1,45 @@
 package com.cyclebikeapp.gold;
 
 final class Constants {
-	 Constants() {}
-    static final String STATE_RESOLVING_ERROR = "resolving_error";
+
+    static final String DDF_KEY_TITLE = "DDF_key_title";
+    static final String DDF_KEY_MESSAGE = "DDF_key_message";
+    static final String TESTING_BATTERY_SAVER = "testing battery saver";
+    static final String UPLOADING_NEW_FILE = "Uploading new file";
+    static final int BYTE_PER_MB = 1000000;
+    static final String SATELLITES_USED = "\nSatellites used - \n";
+    static final String NO_INFO = " x | ";
+    static final String UNK = "UNK";
+    static final String GAL = "GAL";
+    static final String BEID = "BEID";
+    static final String QZSS = "QZSS";
+    static final String GLO = "GLO";
+    static final String SBAS = "SBAS";
+    static final String GPS = "GPS";
+    static final String NUM_SATELLITES_USED = "# satellites used: ";
+    static final String ACCURACY = "Accuracy: ";
+    static final String WI_FI_NEEDED = "WiFi needed? ";
+    static final String CELL_NEEDED = "Cell needed? ";
+    static final String GPS_ENABLED = "GPS enabled: ";
+    static final String NETWORK_ENABLED = "Network enabled: ";
+    static final int SMALL_SCREEN_WIDTH = 250;
+    static final int TITLE_SIZE_PIXELS = 11;
+    static final int VALUE_SIZE_PIXELS = 18;
+    static final int SPEED_SIZE_PIXELS = 34;
+    Constants() {}
     static final int MY_PERMISSIONS_REQUEST_LOCATION = 924;
     static final int MY_PERMISSIONS_REQUEST_WRITE = 824;
-    static final int REQUEST_CHECK_SETTINGS = 94;
-    static final int REQUEST_RESOLVE_ERROR = 1001;
     static final int UPLOAD_FILE_SEND_REQUEST_CODE = 2000;
+    static final int SMALL_FIT_FILE_SIZE = 1500;
+    static final String HI_VIZ = "hi_viz";
+    static final String KEY_TRACKPOINT_DENSITY_DEFAULT = "trackpoint_density_default";
+    static final String AUTO_PAUSE = "auto_pause";
+
     //counter for how many time we've lauched; to post nag upgrade dialog
     static final String NUM_LAUNCHES = "num_launches";
     static final String NAG_TYPE = "nag_type";
-    static final int NAG_TYPE_LATER = 25;
-    static final int NAG_TYPE_NOT_NOW = 10;
+    static final int NAG_TYPE_LATER = 8;
+    static final int NAG_TYPE_NOT_NOW = 5;
     static final String FIT_ACTIVITY_TYPE  = "1";
     static final String TCX_ACTIVITY_TYPE  = "0";
     static final String KEY_AUTH_NO_NETWORK_INTENT = "88";
@@ -21,11 +48,10 @@ final class Constants {
     static final int CHOOSER_TYPE_GPX_FILE = 200;
     static final int CHOOSER_TYPE_TCX_DIRECTORY = 300;
     static final int CHOOSER_TYPE_TCX_FILE = 400;
-    // Unique tag for the error dialog fragment
-    static final String DIALOG_ERROR = "dialog_error";
     static final String EXCEPTION = "Exception";
     static final String NO_LOGOUT = "no logout";
-
+    static final String USER_CANCELED = "user-canceled";
+    static final String INITIALIZING_ROUTE = "Initializing Route";
     static final String FILE_NOT_FOUND = "file not found";
     static final String NO_ROUTE_DATA_IN_FILE = "No route data in file!";
     static final String LOOKING_FOR_ROUTE_DATA = "Looking for route data";
@@ -39,11 +65,13 @@ final class Constants {
     static final String FIT = ".fit";
     static final String DOUBLE_ZERO = "0.0";
     static final short WILDCARD = 0;
+    static final String ACTIVITY_FILE_PATH = "/Android/data/com.cyclebikeapp/files/";
 
     static final String UPLOAD_FILENAME = "upload_filename";
     static final String TCX_LOG_FILE_NAME = "tcxLogFileName";
     static final String TCX_LOG_FILE_FOOTER_LENGTH = "tcxLogFileFooterLength";
     static final String FILENAME_SUFFIX = "_CB_history.tcx";
+    static final String NOTIFICATION_CHANNEL_ID = "cyclebike_notification_channel";
 
     static final String CURR_WP = "curr_WP";
     static final String FIRST_LIST_ELEM = "first_ListElem";
@@ -125,6 +153,7 @@ final class Constants {
      point has been passed or just within reach */
     static final String KEY_DIM = "dimmed";
     static final long ONE_SEC = 1000;
+    static final long THREE_SEC = 3 * ONE_SEC;
     /** set location current if no older than this (in millisec)*/
     static final long TEN_SEC = 10 * 1000;
     /** initial delay for location watchdog */
@@ -149,7 +178,6 @@ final class Constants {
     static final double accurateGPSSpeed = 2. / mph_per_mps;
     /**want good enough location accuracy when writing locations to track file (meters) */
     static final float goodEnoughLocationAccuracy = 50;
-    public static final String KEY_DIST_TYPE = "distanceType";
     static final String SPEED_TRIPLE_X = "XX.x";
     static final String QUESTION = "??";
     static final int DISTANCE_TYPE_MILE = 0;
@@ -159,11 +187,14 @@ final class Constants {
     static final int DIRECT_DISTANCE_TYPE = 1;
     /** RequestCode for ShowFileList activity */
     static final int RC_SHOW_FILE_LIST = 66;
+    static final int REQUEST_CHANGE_LOCATION_SETTINGS = 92;
     static final int ACTIVITY_FILE_TYPE = 1;
     static final int ROUTE_FILE_TYPE = 0;
-    static final String PREF_HI_VIZ = "hi_viz";
     static final String PREFS_DEFAULT_LATITUDE = "37.1";
     static final String PREFS_DEFAULT_LONGITUDE = "-122.1";
     static final long PREFS_DEFAULT_TIME = 123456;
+    static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 0; // 0 meters
+    static final long MIN_TIME_BW_UPDATES = 100; //.1 sec
+    static final String KEY_REQUESTING_LOCATION_UPDATES = "requesting_location_updates";
 
 }

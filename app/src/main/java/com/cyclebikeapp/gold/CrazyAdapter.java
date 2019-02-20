@@ -44,13 +44,13 @@ class CrazyAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View vi = convertView;
 		if (convertView == null)
-			vi = inflater.inflate(R.layout.crazy_list_row, null);
+			vi = inflater.inflate(R.layout.turn_list_row, null);
 
-		TextView street = (TextView) vi.findViewById(R.id.street_name); // title
-		TextView distance = (TextView) vi.findViewById(R.id.distance);
-		TextView distanceUnit = (TextView) vi.findViewById(R.id.distance_unit);
-		ImageView turnIcon = (ImageView) vi.findViewById(R.id.turn_icon);
-		ImageView bearingIcon = (ImageView) vi.findViewById(R.id.arrow_icon);
+		TextView street = vi.findViewById(R.id.street_name); // title
+		TextView distance = vi.findViewById(R.id.distance);
+		TextView distanceUnit = vi.findViewById(R.id.distance_unit);
+		ImageView turnIcon = vi.findViewById(R.id.turn_icon);
+		ImageView bearingIcon = vi.findViewById(R.id.arrow_icon);
 		HashMap<String, String> fileItem;
 		fileItem = data.get(position);
 		// Setting all values in listview

@@ -1,5 +1,6 @@
 package com.cyclebikeapp.gold;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -17,6 +18,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import static com.cyclebikeapp.gold.Constants.ACTIVITY_FILE_PATH;
 import static com.cyclebikeapp.gold.Constants.FILENAME_SUFFIX;
 import static com.cyclebikeapp.gold.Constants.FORMAT_2F;
 import static com.cyclebikeapp.gold.Constants.FORMAT_7F;
@@ -28,6 +30,8 @@ import static com.cyclebikeapp.gold.Constants.TCX_LOG_FILE_FOOTER_LENGTH;
 import static com.cyclebikeapp.gold.Constants.TCX_LOG_FILE_NAME;
 import static com.cyclebikeapp.gold.Constants.requiredStorageSpace;
 import static com.cyclebikeapp.gold.Constants.semicircle_per_degrees;
+import static com.cyclebikeapp.gold.Utilities.hasStoragePermission;
+import static com.cyclebikeapp.gold.Utilities.isFileSpaceAvailable;
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
 class TCXLogFile {
@@ -89,7 +93,7 @@ class TCXLogFile {
 	String outFileName = "";
 	Integer outFileFooterLength = 1;
 	private final String pathName = Environment.getExternalStorageDirectory().getAbsolutePath()
-			+"/Android/data/com.cyclebikeapp/files/";
+			+ ACTIVITY_FILE_PATH;
 	private final Context context;
 
 	TCXLogFile(Context context) {
@@ -100,18 +104,20 @@ class TCXLogFile {
     void reopenTCX(BikeStat bs, NavRoute nr) {
 		// presumably the file exists, just re-open it here and position the file pointer
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
-        if (fileHasPermission && Utilities.isFileSpaceAvailable(requiredStorageSpace)) {
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
+        if (fileHasPermission && isFileSpaceAvailable(requiredStorageSpace)) {
             File appFiles = new File(pathName);
-            if (!appFiles.exists()) {
-                appFiles.mkdirs();
-            }
 			try {
+                if (!appFiles.exists()) {
+                    appFiles.mkdirs();
+                }
 				logout = new RandomAccessFile(new File(appFiles, outFileName), "rw");
 			} catch (FileNotFoundException e) {
 				setError(context.getString(R.string.error_reopening_raf));
-				Log.w(this.getClass().getName(), context.getString(R.string.error_re_opening_log_file) + e.toString());
-			}
+				Log.w(this.getClass().getSimpleName(), context.getString(R.string.error_re_opening_log_file) + e.toString());
+			} catch (SecurityException e1){
+			    setError(e1.toString());
+            }
 			if (logout != null) {
 				try {
 					// position pointer to write record
@@ -122,7 +128,7 @@ class TCXLogFile {
 					saveTCXName_FooterLength();
 				} catch (IOException e) {
 					setError(context.getString(R.string.error_re_opening_log_file));
-					Log.w(this.getClass().getName(), context.getString(R.string.error_re_opening_log_file) + e.toString());
+					Log.w(this.getClass().getSimpleName(), context.getString(R.string.error_re_opening_log_file) + e.toString());
 				}
 			}
 		} else {
@@ -161,7 +167,7 @@ class TCXLogFile {
 		// </LX>
 		// </Extensions>
 
-		String summary =   SMY_RIDETIME_START
+		@SuppressLint("DefaultLocale") String summary =   SMY_RIDETIME_START
 				+ String.format(FORMAT_2F, bs.getGPSRideTime())
 				+ SMY_RIDETIME_END
 				
@@ -185,13 +191,17 @@ class TCXLogFile {
 
 	void openNewTCX(BikeStat bs, NavRoute nr) {
 		//close the previous Log File, if it exists
+        if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "openNewTCX() - outfileName: " + outFileName);
 		closeTCXLogFile();
 		// compose ID tag
 		String idTag = composeIDTag(bs.getLastGoodWP());
 		// test file storage
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
-        if (fileHasPermission && Utilities.isFileSpaceAvailable(requiredStorageSpace)) {
+		boolean fileHasPermission = updateExternalStorageState()  && hasStoragePermission(context);
+        if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "openNewTCX() - fileHasPermission? "
+                + (fileHasPermission?"yes":"no") + " file space available? "
+                + ( isFileSpaceAvailable(requiredStorageSpace)?"yes":"no"));
+        if (fileHasPermission && isFileSpaceAvailable(requiredStorageSpace)) {
             File appFiles = new File(pathName);
             if (!appFiles.exists()) {
                 appFiles.mkdirs();
@@ -206,7 +216,8 @@ class TCXLogFile {
 			
 			if (logout != null) {
 				try {
-					// write header
+                    if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "openNewTCX() - writing to new outfile");
+                    // write header
 					logout.writeBytes(TCX_HEADER1 + TCX_HEADER2 + TCX_HEADER3);
 					// write ID tag
 					logout.writeBytes(ID_START + idTag + ID_END);
@@ -280,10 +291,13 @@ class TCXLogFile {
 	}
 	
 	String composeTCXFileName(){
-		String format = "M_d_y-h_m_s_a";
+		String format = "M_d_yy-h_m_a";
 		String suffix = FILENAME_SUFFIX;
 		SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
-		return sdf.format(new Date(System.currentTimeMillis())) + suffix;		
+		String newOutfilename = sdf.format(new Date(System.currentTimeMillis())) + suffix;
+        if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "composeTCXFileName() newOutfileName: "
+                + newOutfilename);
+		return newOutfilename;
 	}
 
 	/**
@@ -298,7 +312,7 @@ class TCXLogFile {
 		boolean old = true;
 		// test if the SD card is available
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
 		if (fileHasPermission) {
 			// test files directory under Android/data/...
 			File appFiles = new File(pathName);
@@ -307,13 +321,21 @@ class TCXLogFile {
             }
 			if (appFiles.isDirectory()) {
 				File tempFile = new File(appFiles, outFileName);
-				if (tempFile.exists()) {
+                if (MainActivity.debugAppState) Log.i(this.getClass().getSimpleName(), "readTCXFileLastModTime() tempFile "
+                        + tempFile.getName() + " exists? " + (tempFile.exists()? "yes":"no"));
+
+                if (tempFile.exists()) {
 					// find out when we last wrote to the file
 					// get a millisecond value of the current time
 					SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
 					long timeTag = Long.valueOf(settings.getString(LAST_MODIFIED, "0"));
 					long now = new Date(System.currentTimeMillis()).getTime();
 					old = Math.abs(now - timeTag) > resetTime * ONE_HOUR;
+                    if (MainActivity.debugAppState){
+                        Log.i(this.getClass().getSimpleName(), "readTCXFileLastModTime, file exists " + (old ? " yes" : "no")
+                                + " now " + now
+                                + " timeTag " + timeTag);
+                    }
 				} else {
 					//file doesn't exist, so can't check date modified
 					//just open a new tcx file with old = true
@@ -340,7 +362,7 @@ class TCXLogFile {
 		sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
 		Location tempLoc = new Location(bs.getLastGoodWP());
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
 		if (fileHasPermission & (logout != null)) {
 			try {
 				if (nr.trackClosed) {
@@ -427,7 +449,7 @@ class TCXLogFile {
 		// when paused, end the old Track and start a new one
 		// assume that the file pointer is properly positioned to start with
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
 		if (fileHasPermission & (logout != null)) {
 			try {
 				logout.writeBytes(TRACK_END_TAG);

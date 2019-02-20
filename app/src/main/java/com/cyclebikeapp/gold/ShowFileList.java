@@ -72,7 +72,7 @@ public class ShowFileList extends AppCompatActivity {
 	private static final CharSequence FTYPE_FIT = FIT;
 	private File gpxPath = new File(Environment.getExternalStorageDirectory().toString());
 	private final File activityFilePath = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
-			+"/Android/data/com.cyclebikeapp/files/");
+			+ Constants.ACTIVITY_FILE_PATH);
 	private List<File> fileFileList = new ArrayList<>();
 	private boolean mExternalStorageAvailable = false;
     private static final boolean debugAppState = MainActivity.debugAppState;
@@ -104,9 +104,9 @@ public class ShowFileList extends AppCompatActivity {
 		} else {
 			handleTCX_FITFileList(filesList, settings);			
 		}
-        ListView list = (ListView) findViewById(R.id.list);
+        ListView list = findViewById(R.id.list);
 		// Getting adapter by passing files data ArrayList
-        LazyAdapter adapter = new LazyAdapter(this, filesList);
+        ChooserAdapter adapter = new ChooserAdapter(this, filesList);
 		list.setAdapter(adapter);
 		list.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -261,6 +261,9 @@ public class ShowFileList extends AppCompatActivity {
 			}
 				fileSize = "" + String.format(FORMAT_4_1F, fileLength) + suffix;
 		}
+        if (Utilities.isScreenWidthSmall(getApplicationContext())){
+            fileSize = "";
+        }
 		return fileSize;
 	}
 

@@ -37,20 +37,23 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import static com.cyclebikeapp.gold.Constants.ACTIVITY_FILE_PATH;
 import static com.cyclebikeapp.gold.Constants.FIT;
 import static com.cyclebikeapp.gold.Constants.FIT_MANUFACTURER_DEVELOPMENT;
 import static com.cyclebikeapp.gold.Constants.FIT_RUNTIME_EXCEPTION;
 import static com.cyclebikeapp.gold.Constants.FORMAT_4_3F;
 import static com.cyclebikeapp.gold.Constants.IO_EXCEPTION;
 import static com.cyclebikeapp.gold.Constants.PARSER_CONFIG;
+import static com.cyclebikeapp.gold.Constants.SMALL_FIT_FILE_SIZE;
 import static com.cyclebikeapp.gold.Constants.TCX;
 import static com.cyclebikeapp.gold.Constants.semicircle_per_degrees;
+import static com.cyclebikeapp.gold.Utilities.hasStoragePermission;
 
 @SuppressWarnings("ResultOfMethodCallIgnored")
 class FITLogFile {
 
 	private final String pathName = Environment.getExternalStorageDirectory().getAbsolutePath()
-			+"/Android/data/com.cyclebikeapp/files/";
+			+ ACTIVITY_FILE_PATH;
     private FileEncoder encode;
 	private String error = "";
 	private String sdError = "";
@@ -106,14 +109,14 @@ class FITLogFile {
 		// get the new data record. We don't open a new file
 		// until there is a new record from Location Listener
 		Location tempLoc = bs.getLastLocation();
-		boolean fileHasPermission = updateExternalStorageState();
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
 		if (fileHasPermission) {
 			try {				
 				// replace the ".tcx" with ".fit"
 				fitOutFileName = stripFilePath(delTCXFITSuffix(fitOutFileName) + FIT);
 				// get tcx filepath
 				File tcxDir = new File(Environment.getExternalStorageDirectory()
-						+ "/Android/data/com.cyclebikeapp/files/");
+						+ ACTIVITY_FILE_PATH);
                 if (!tcxDir.exists()) {
                     tcxDir.mkdirs();
                 }
@@ -256,7 +259,7 @@ class FITLogFile {
 		long timingStartTime = System.nanoTime();
 		// test file storage
 		setError("");
-		boolean fileHasPermission = updateExternalStorageState();
+		boolean fileHasPermission = updateExternalStorageState() && hasStoragePermission(context);
 		if (fileHasPermission) {
 
 			try {
@@ -328,6 +331,7 @@ class FITLogFile {
 		if (encode == null || isFileEncoderBusy()) {
 			return;
 		}
+		setFileEncoderBusy(true);
 		//write summary values like TripTime, TripDistance, averages. maximums every time
 		RecordMesg aRecordMesg;
 		aRecordMesg = composeRecordMesg(bs);
@@ -338,6 +342,9 @@ class FITLogFile {
 		} catch(FitRuntimeException e) {
 			setError(FIT_RUNTIME_EXCEPTION);
 		}
+		finally {
+            setFileEncoderBusy(false);
+        }
 	}
 
 	/**
@@ -687,7 +694,7 @@ class FITLogFile {
 	 */
 	private List<File> mLoadActivityFileList() {
 		File activityFilePath = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
-                +"/Android/data/com.cyclebikeapp/files/");
+                + ACTIVITY_FILE_PATH);
 		List<File> fileFileList = new ArrayList<>();
         try {
             if (!activityFilePath.exists()){
@@ -699,10 +706,10 @@ class FITLogFile {
             FilenameFilter filter = new FilenameFilter() {
                 public boolean accept(File dir, String filename) {
                     File sel = new File(dir, filename);
-                    // look for .fit files with size < .5 kB
+                    // look for .fit files with size < 1.5 kB
                     Log.w(this.getClass().getSimpleName(), "filename: " + filename
                             + " fileSize: " + sel.length());
-                    return filename.contains(FIT) && (sel.length() < 500);
+                    return filename.contains(FIT) && (sel.length() < SMALL_FIT_FILE_SIZE);
                 }
             };
             fileFileList = Arrays.asList(activityFilePath.listFiles(filter));
